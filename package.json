@@ -1,0 +1,22 @@
+{
+  "name": "playwright-multi-role-export-testing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright framework for regression-testing PDF/Excel export features across multiple user roles and environments",
+  "scripts": {
+    "auth": "tsx scripts/generate-auth.ts",
+    "auth:prod": "cross-env TEST_ENV=production tsx scripts/generate-auth.ts",
+    "test": "playwright test",
+    "test:prod": "cross-env TEST_ENV=production playwright test",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^22.0.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^17.4.2",
+    "exceljs": "^4.4.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
